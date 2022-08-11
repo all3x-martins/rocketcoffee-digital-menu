@@ -49,6 +49,7 @@ section h2 {
   font-size: 18px;
   line-height: 21px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
 }
 .detalhes p {
   color: rgba(0, 0, 0, 0.6);
