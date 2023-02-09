@@ -8,7 +8,10 @@
   padding: 0;
 }
 body { 
-  background-image: linear-gradient(to right top, #ffedd5, #ffeed2, #fff0cf, #fff1cc, #fff3c9);
+  background-image: url(/imagens/background.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -17,24 +20,29 @@ header {
   padding: 32px 0;
   text-align: center;
 }
+
 header, section {
   max-width: 400px;
   margin: 0 auto;
 }
+
 header h1 {
   margin-bottom: 4px;
   font-size: 28px;
   line-height: 33px;
 }
+
 span {
-  color: rgb(105, 55, 1);
+  color: #693701;
 }
+
 header p {
   font-size: 14px;
   line-height: 16px;
 
 color: rgba(0, 0, 0, 0.7);
 }
+
 .logo {
   width: 150px;
   margin-bottom: -5px;
@@ -44,9 +52,10 @@ color: rgba(0, 0, 0, 0.7);
 section{
   margin-bottom: 24px;
 }
+
 section h2 {
   background-color:#FED7AA;
-  color: #2D2C2A;
+  color: #000000;
   text-align: center;
   padding: 8px 16px;
   margin-bottom: 24px;
@@ -55,11 +64,13 @@ section h2 {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.24);
   border-radius: 4px;
 }
+
 .detalhes p {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgb(0, 0, 0);
   font-size: 14px;
   line-height: 21px;
 }
+
 .preco {
   font-size: 16px;
   line-height: 19px;
@@ -72,9 +83,11 @@ ul li{
   list-style: none;
   margin-bottom: 16px;
 }
+
 li .detalhes {
   max-width: 340px;
 }
+
 .detalhes h3 {
   margin-bottom: 8px;
   font-size: 16px;
@@ -89,8 +102,59 @@ h1, h2, h3, .preco {
 }
 
 /*Media query*/
+@media (max-width: 1580px) {
+  body{
+    background-image: url(/imagens/background1580x804.png);
+  }  
+  
+}
+
+@media (max-width: 1400px) {
+  body{
+    background-image: url(/imagens/background1400x804.png);
+  }  
+  
+}
+
+@media (max-width: 1320px) {
+  body{
+    background-image: url(/imagens/background1320x804.png);
+  }  
+  
+}
+
+
+@media (max-width: 1270px) {
+  body{
+    background-image: url(/imagens/background1270x804.png);
+  }  
+  
+}
+
+@media (max-width: 1080px) {
+  body{
+    background-image: url(/imagens/background1080x804.png);
+  }  
+  
+}
+
+@media (max-width: 720px) {
+  body{
+    background-image: url(/imagens/background720x804.png);
+  }  
+  
+}
+
 @media (max-width: 410px) {
   body{
+    background-image: url(/imagens/background410x804.png);
     padding: 0px 10px;
   }
+}
+
+@media (max-width: 390px) {
+  body{
+    background-image: url(/imagens/background360x740.png);
+  }  
+  
 }
