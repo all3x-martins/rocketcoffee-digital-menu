@@ -8,7 +8,7 @@
   padding: 0;
 }
 body { 
-  background-image: url(/imagens/background.png);
+  background-image: url(../imagens/background.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,21 +104,21 @@ h1, h2, h3, .preco {
 /*Media query*/
 @media (max-width: 1580px) {
   body{
-    background-image: url(/imagens/background1580x804.png);
+    background-image: url(../imagens/background1580x804.png);
   }  
   
 }
 
 @media (max-width: 1400px) {
   body{
-    background-image: url(/imagens/background1400x804.png);
+    background-image: url(../imagens/background1400x804.png);
   }  
   
 }
 
 @media (max-width: 1320px) {
   body{
-    background-image: url(/imagens/background1320x804.png);
+    background-image: url(../imagens/background1320x804.png);
   }  
   
 }
@@ -126,35 +126,35 @@ h1, h2, h3, .preco {
 
 @media (max-width: 1270px) {
   body{
-    background-image: url(/imagens/background1270x804.png);
+    background-image: url(../imagens/background1270x804.png);
   }  
   
 }
 
 @media (max-width: 1080px) {
   body{
-    background-image: url(/imagens/background1080x804.png);
+    background-image: url(../imagens/background1080x804.png);
   }  
   
 }
 
 @media (max-width: 720px) {
   body{
-    background-image: url(/imagens/background720x804.png);
+    background-image: url(../imagens/background720x804.png);
   }  
   
 }
 
 @media (max-width: 410px) {
   body{
-    background-image: url(/imagens/background410x804.png);
+    background-image: url(../imagens/background410x804.png);
     padding: 0px 10px;
   }
 }
 
 @media (max-width: 390px) {
   body{
-    background-image: url(/imagens/background360x740.png);
+    background-image: url(../imagens/background360x740.png);
   }  
   
 }
