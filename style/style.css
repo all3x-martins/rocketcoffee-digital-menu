@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,700&display=swap');
 
 /*Global*/
 * {
@@ -8,6 +6,11 @@
   padding: 0;
 }
 body { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   background-image: linear-gradient(to right top, #ffedd5, #ffeed2, #fff0cf, #fff1cc, #fff3c9);
   font-family: 'Roboto', sans-serif;
 }
@@ -85,6 +88,29 @@ li .detalhes {
   max-width: 340px;
 }
 
+.add-to-cart {
+  background-color: #8B4513;
+  color: white;
+}
+.add-to-cart:hover {
+  background-color: #6A2C0F;
+}
+
+.add-to-cart {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
 .detalhes h3 {
   margin-bottom: 8px;
   font-size: 16px;
@@ -96,4 +122,24 @@ li .detalhes {
 h1, h2, h3, .preco {
   font-family: 'Roboto Serif', serif;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  header, section {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header, section {
+    max-width: 800px;
+  }
+
+  ul li {
+    justify-content: space-between;
+  }
+
+  .detalhes {
+    max-width: 600px;
+  }
 }

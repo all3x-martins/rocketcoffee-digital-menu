@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" href="imagens/rocketCoffee-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:wght@700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="dark-mode">
     <header>
-      <img class="logo" src="imagens/rocketCoffee-logo.png" alt="Rocket Coffee Logo">
+      <img class="logo" src="imagens/rocketCoffee-logo.png" alt="Rocket Coffee Logo" loading="lazy">
       <h1>
         Rocket<span>Coffee</span>
       </h1>
       <p>
         Aberto todos os dias. 8h-20h
       </p>
+      <input type="text" id="search-bar" placeholder="Buscar no menu...">
     </header>
     <section>
-      <h2><i class="fa-solid fa-utensils"></i> BRUNCH</h2>
+      <h2><i class="fa-solid fa-utensils" aria-hidden="true"></i> BRUNCH</h2>
       <ul>
         <li>
           <div class="detalhes">
@@ -29,6 +33,7 @@
             </p>
           </div>
           <strong class="preco">R$37.70</strong>
+          <button class="add-to-cart">Adicionar</button>
         </li>
         <li>
           <div class="detalhes">
@@ -38,6 +43,7 @@
             </p>
           </div>
           <strong class="preco">R$17.70</strong>
+          <button class="add-to-cart">Adicionar</button>
         </li>
         <li>
           <div class="detalhes">
@@ -47,6 +53,7 @@
             </p>
           </div>
           <strong class="preco">R$14.90</strong>
+          <button class="add-to-cart">Adicionar</button>
         </li>
       </ul>
     </section>
@@ -61,6 +68,7 @@
             </p>
           </div>
           <strong class="preco">R$16.90</strong>
+          <button class="add-to-cart">Adicionar</button>
         </li>
         <li>
           <div class="detalhes">
@@ -70,6 +78,7 @@
             </p>
           </div>
           <strong class="preco">R$17.70</strong>
+          <button class="add-to-cart">Adicionar</button>
         </li>
         <li>
           <div class="detalhes">
@@ -79,8 +88,10 @@
             </p>
           </div>
           <strong class="preco">R$10.70</strong>
+          <button class="add-to-cart">Adicionar</button>
         </li>
       </ul>
     </section>
   </body>
+<script src="js/script.js"></script>
 </html>
