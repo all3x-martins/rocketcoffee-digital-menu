@@ -20,8 +20,35 @@
       <p>
         Aberto todos os dias. 8h-20h
       </p>
-      <input type="text" id="search-bar" placeholder="Buscar no menu...">
+      <div class="menu">
+          <!-- Botão de Pesquisa -->
+          <button id="search-toggle" class="search-toggle">
+          <i class="fa-solid fa-magnifying-glass"></i> Buscar
+          </button>
+    
+          <!-- Barra de Pesquisa -->
+          <input type="text" id="search-bar" class="search-bar" placeholder="Buscar no menu...">
+    
+          <!-- Ícone do Carrinho com Contador -->
+          <div class="cart-container">
+          <button id="cart-button" class="cart-button">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count" class="cart-count">0</span>
+          </button>
+          </div>
+      </div>
     </header>
+    
+    <!-- Seção do carrinho, inicialmente oculta -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <h3>Seu Carrinho</h3>
+        <ul id="cart-items">
+          <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+        </ul>
+        <button id="close-cart">Fechar</button>
+      </div>
+    </div>
     <section>
       <h2><i class="fa-solid fa-utensils" aria-hidden="true"></i> BRUNCH</h2>
       <ul>
@@ -92,6 +119,18 @@
         </li>
       </ul>
     </section>
+   <!-- Modal do Carrinho -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-modal-content">
+    <h3>Seu Carrinho</h3>
+    <ul id="cart-items"></ul>
+    <div class="cart-total">
+      <strong>Total: R$ <span id="cart-total">0.00</span></strong>
+    </div>
+    <button id="checkout-button">Finalizar Compra</button>
+    <button id="close-cart">Fechar</button>
+  </div>
+</div>  
   </body>
 <script src="js/script.js"></script>
 </html>
