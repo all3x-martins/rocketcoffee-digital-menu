@@ -4,7 +4,8 @@ Pequeno projeto desenvolvido utilizando **HTML e CSS** durante a **Maratona Expl
 
 ## 💻 Tecnologias  
 - HTML5  
-- CSS3  
+- CSS3
+- JavaScript
 
 ## 📌 Funcionalidades  
 - Página responsiva  
