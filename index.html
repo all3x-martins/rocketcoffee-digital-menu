@@ -4,133 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RocketCoffee</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="imagens/rocketCoffee-favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:wght@700&display=swap" rel="stylesheet">  
   </head>
-  <body class="dark-mode">
-    <header>
-      <img class="logo" src="imagens/rocketCoffee-logo.png" alt="Rocket Coffee Logo" loading="lazy">
-      <h1>
-        Rocket<span>Coffee</span>
-      </h1>
-      <p>
-        Aberto todos os dias. 8h-20h
-      </p>
-      <div class="menu">
-          <!-- Botão de Pesquisa -->
-          <button id="search-toggle" class="search-toggle">
-          <i class="fa-solid fa-magnifying-glass"></i> Buscar
-          </button>
-    
-          <!-- Barra de Pesquisa -->
-          <input type="text" id="search-bar" class="search-bar" placeholder="Buscar no menu...">
-    
-          <!-- Ícone do Carrinho com Contador -->
-          <div class="cart-container">
-          <button id="cart-button" class="cart-button">
-          <i class="fa-solid fa-cart-shopping"></i>
+
+  <header>
+    <div class="logo">
+      <img src="imagens/rocketCoffee-logo.png" alt="Logo" />
+      <h1>Rocket<span>Coffee</span></h1>
+    </div>
+    <div class="menu">
+      <button id="search-toggle" class="search-toggle">
+        <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F3F3"><path d="M782.87-98.52 526.91-354.48q-29.43 21.74-68.15 34.61Q420.04-307 375.48-307q-114.09 0-193.55-79.46-79.45-79.45-79.45-193.54 0-114.09 79.45-193.54Q261.39-853 375.48-853q114.09 0 193.54 79.46 79.46 79.45 79.46 193.54 0 45.13-12.87 83.28T601-429.7l256.52 257.09-74.65 74.09ZM375.48-413q69.91 0 118.45-48.54 48.55-48.55 48.55-118.46t-48.55-118.46Q445.39-747 375.48-747t-118.46 48.54Q208.48-649.91 208.48-580t48.54 118.46Q305.57-413 375.48-413Z"/></svg></i> Buscar
+      </button>
+      <input type="text" id="search-bar" class="search-bar" placeholder="Buscar no menu...">
+      <div class="cart-container">
+        <button id="cart-button" class="cart-button">
+          <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-71.52q-33 0-56.5-23.5t-23.5-56.5q0-33 23.5-56.5t56.5-23.5q33 0 56.5 23.5t23.5 56.5q0 33-23.5 56.5T280-71.52Zm400 0q-33 0-56.5-23.5t-23.5-56.5q0-33 23.5-56.5t56.5-23.5q33 0 56.5 23.5t23.5 56.5q0 33-23.5 56.5T680-71.52Zm-419.87-640 83 174h277.74l95.3-174H260.13Zm-47.04-96.96h568.52q32.96 0 50.15 28.98 17.2 28.98 1.11 59.02l-129 233.96q-12.13 21.69-32.58 34.11Q650.84-440 626.52-440H333.61l-38.91 71.52h473.78v96.96H280q-51.22 0-76.48-44.02-25.26-44.03-1.43-86.98l52.3-93.48-139.48-295.52H31.52v-96.96h143.57l38 80Zm130.04 270.96h277.74-277.74Z"/></svg></i>
           <span id="cart-count" class="cart-count">0</span>
-          </button>
-          </div>
-      </div>
-    </header>
-    
-    <!-- Seção do carrinho, inicialmente oculta -->
-    <div id="cart-modal" class="cart-modal">
-      <div class="cart-content">
-        <h3>Seu Carrinho</h3>
-        <ul id="cart-items">
-          <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
-        </ul>
-        <button id="close-cart">Fechar</button>
+        </button>
       </div>
     </div>
-    <section>
-      <h2><i class="fa-solid fa-utensils" aria-hidden="true"></i> BRUNCH</h2>
-      <ul>
-        <li>
-          <div class="detalhes">
-            <h3>Waffle</h3>
-            <p class="descricao">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </p>
-          </div>
-          <strong class="preco">R$37.70</strong>
-          <button class="add-to-cart">Adicionar</button>
-        </li>
-        <li>
-          <div class="detalhes">
-            <h3>Ovos Benedict</h3>
-            <p class="descricao">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-          </div>
-          <strong class="preco">R$17.70</strong>
-          <button class="add-to-cart">Adicionar</button>
-        </li>
-        <li>
-          <div class="detalhes">
-            <h3>Torradas de abacate</h3>
-            <p class="descricao">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-          </div>
-          <strong class="preco">R$14.90</strong>
-          <button class="add-to-cart">Adicionar</button>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2><i class="fa-solid fa-mug-saucer"></i> BEBIDAS</h2>
-      <ul>
-        <li>
-          <div class="detalhes">
-            <h3>Cappuccino</h3>
-            <p class="descricao">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </p>
-          </div>
-          <strong class="preco">R$16.90</strong>
-          <button class="add-to-cart">Adicionar</button>
-        </li>
-        <li>
-          <div class="detalhes">
-            <h3>Suco de laranja</h3>
-            <p class="descricao">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-          </div>
-          <strong class="preco">R$17.70</strong>
-          <button class="add-to-cart">Adicionar</button>
-        </li>
-        <li>
-          <div class="detalhes">
-            <h3>Água com gás</h3>
-            <p class="descricao">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-          </div>
-          <strong class="preco">R$10.70</strong>
-          <button class="add-to-cart">Adicionar</button>
-        </li>
-      </ul>
-    </section>
-   <!-- Modal do Carrinho -->
-<div id="cart-modal" class="cart-modal">
-  <div class="cart-modal-content">
-    <h3>Seu Carrinho</h3>
-    <ul id="cart-items"></ul>
-    <div class="cart-total">
-      <strong>Total: R$ <span id="cart-total">0.00</span></strong>
+  </header>
+
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h3>Seu Carrinho</h3>
+      <ul id="cart-items"></ul>
+      <div class="cart-total">
+        <strong>Total: R$ <span id="cart-total">0.00</span></strong>
+      </div>
+      <button id="close-cart">Fechar</button>
     </div>
-    <button id="checkout-button">Finalizar Compra</button>
-    <button id="close-cart">Fechar</button>
   </div>
-</div>  
-  </body>
-<script src="js/script.js"></script>
+
+  <section>
+    <h2>BEBIDAS</h2>
+    <ul>
+      <li>
+        <div class="detalhes">
+          <h3>Cappuccino</h3>
+          <p>Delicioso cappuccino cremoso.</p>
+        </div>
+        <strong class="preco">R$16.90</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>Suco de Laranja</h3>
+          <p>Suco natural e refrescante.</p>
+        </div>
+        <strong class="preco">R$17.70</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>Água com gás</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <strong class="preco">R$3,50</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>Café Espresso</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <strong class="preco">R$10,50</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>Frapuccino</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <strong class="preco">R$12,50</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>CHÁS</h2>
+    <ul>
+      <li>
+        <div class="detalhes">
+          <h3>MATE LEMON TEA</h3>
+          <p>Fruit Tea de limão a base de chá mate. 500ml</p>
+        </div>
+        <strong class="preco">R$18.00</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>FRUIT TEA MARACUJÁ GELADO</h3>
+          <p>Chá verde Jasmim com maracujá. 460ml</p>
+        </div>
+        <strong class="preco">R$17.70</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>FRUIT TEA FRUTAS VERMELHAS</h3>
+          <p>Uma explosão de sabores com chá verde de jasmim, morango, blueberry, framboesa desidratada e um toque fresco de suco de limão</p>
+        </div>
+        <strong class="preco">R$17.70</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>MATE LEMON TEA</h3>
+          <p>Fruit Tea de limão a base de chá mate. 500ml</p>
+        </div>
+        <strong class="preco">R$17.70</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>PÃES E SANDUÍCHES</h2>
+    <ul>
+      <li>
+        <div class="detalhes">
+          <h3>CROISSANT TRADICIONAL</h3>
+          <p>Massa aerada amanteigada com crosta crocante e dourada.</p>
+        </div>
+        <strong class="preco">R$15.00</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>CROISSANT SALAME</h3>
+          <p>Croissant com fatias de salame, pasta cremosa de manjericão, rúcula e queijo.</p>
+        </div>
+        <strong class="preco">R$25.00</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>PÃO DE FORMA TRADICIONAL</h3>
+          <p>Massa leve, fofinha, amanteigada com um toque adocicado.</p>
+        </div>
+        <strong class="preco">R$20.70</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>SOFT BAGEL QUEIJO E PRESUNTO</h3>
+          <p>Sanduíche feito com bagel macio, recheado com muçarela, creme adocicado de queijo, fatias de presunto e rúcula (opcional).</p>
+        </div>
+        <strong class="preco">R$22.00</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>ÁGUA</h2>
+    <ul>
+      <li>
+        <div class="detalhes">
+          <h3>Água mineral natural</h3>
+          <p>Água mineral natural. 300ml</p>
+        </div>
+        <strong class="preco">R$17.70</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+      <li>
+        <div class="detalhes">
+          <h3>Água mineral natural com gás</h3>
+          <p>Água mineral natural com gás. 300ml</p>
+        </div>
+        <strong class="preco">R$3,50</strong>
+        <button class="add-to-cart">Adicionar</button>
+      </li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
