@@ -1,19 +1,14 @@
 # 🚀 RocketCoffee
 
-Pequeno projeto desenvolvido utilizando **HTML e CSS** durante a **Maratona Explorer 3** da Rocketseat. ☕🚀
+Pequeno projeto desenvolvido utilizando **HTML, CSS e JavaScript** durante a **Maratona Explorer 3** da Rocketseat. ☕🚀
 
 ## 💻 Tecnologias  
 - HTML5  
 - CSS3
 - JavaScript
 
-## 📌 Funcionalidades  
-- Página responsiva  
-- Menu interativo  
-- Estilização moderna com gradientes  
- 
- <br>
- 
+## 🎨 Layout
+O layout foi baseado no desafio da Rocketseat e otimizado para responsividade. 
 
- 
-![Print](https://user-images.githubusercontent.com/85321713/187113942-18c58eec-16ca-4d3d-ae6d-7feffe5e77b4.png)
+## 📷 Preview
+![Screenshot](https://github.com/user-attachments/assets/bac837d5-0da9-47da-a805-bd880f5269c2)
