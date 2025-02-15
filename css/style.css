@@ -13,7 +13,7 @@ header {
   background-color: #fff;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -24,8 +24,7 @@ header {
 }
 
 .logo img {
-  width: 50px;
-  margin-right: 10px;
+  width: 100px;
 }
 
 .menu {
@@ -99,7 +98,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff9900;
+  background-color: #3e2723ff;
   color: white;
   padding: 10px;
   border: none;
@@ -110,7 +109,7 @@ button {
 }
 
 button:hover {
-  background-color: #e68a00;
+  background-color: rgb(87, 54, 48);
 }
 
 .conteiner {
@@ -165,6 +164,7 @@ ul li button:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   header {
+    justify-content: space-between;
     padding: 10px;
   }
 
@@ -207,7 +207,7 @@ ul li button:hover {
 
 @media (max-width: 480px) {
   .logo img {
-    width: 40px;
+    width: 80px;
   }
 
   .logo h1 {
