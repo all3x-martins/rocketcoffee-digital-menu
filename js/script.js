@@ -1,76 +1,100 @@
-// Barra de pesquisa
-const searchToggle = document.getElementById('search-toggle');
-const searchBar = document.getElementById('search-bar');
+// Seletores
+const searchToggle = document.getElementById("search-toggle");
+const searchBar = document.getElementById("search-bar");
+const cartButton = document.getElementById("cart-button");
+const cartModal = document.getElementById("cart-modal");
+const closeCart = document.getElementById("close-cart");
+const cartItemsList = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+const cartCount = document.getElementById("cart-count");
 
-// Alterna a visibilidade da barra de pesquisa
-searchToggle.addEventListener('click', () => {
-  searchBar.classList.toggle('open'); // Alterna a classe para expandir/contrair a barra
-  searchBar.focus(); // Foca no campo de pesquisa quando ele abrir
-});
+// Variáveis globais
+let cart = [];
+let total = 0;
 
-// Fecha a barra de pesquisa quando clicar fora dela
-document.addEventListener('click', (event) => {
-  if (!searchBar.contains(event.target) && !searchToggle.contains(event.target)) {
-    searchBar.classList.remove('open');
+// Função para mostrar/ocultar a barra de busca
+searchToggle.addEventListener("click", () => {
+  searchBar.classList.toggle("open");
+  if (searchBar.classList.contains("open")) {
+    searchBar.focus(); // Focar na barra de busca quando aberta
   }
 });
 
-// Função de busca
-searchBar.addEventListener('input', () => {
-  const searchText = searchBar.value.toLowerCase();
-  document.querySelectorAll('ul li').forEach(item => {
-    const itemText = item.innerText.toLowerCase();
-    item.style.display = itemText.includes(searchText) ? 'flex' : 'none';
+// Função para filtrar os itens do menu
+searchBar.addEventListener("input", () => {
+  const searchTerm = searchBar.value.toLowerCase();
+  const sections = document.querySelectorAll(".conteiner section");
+
+  sections.forEach((section) => {
+    const items = section.querySelectorAll("li");
+    let hasVisibleItems = false;
+
+    items.forEach((item) => {
+      const itemName = item.querySelector("h3").textContent.toLowerCase();
+      if (itemName.includes(searchTerm)) {
+        item.style.display = "flex";
+        hasVisibleItems = true;
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    // Mostrar/ocultar a seção com base na visibilidade dos itens
+    section.style.display = hasVisibleItems ? "block" : "none";
   });
 });
 
+// Função para adicionar itens ao carrinho
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest("li");
+    const itemName = item.querySelector("h3").textContent;
+    const itemPrice = parseFloat(
+      item.querySelector(".preco").textContent.replace("R$", "").trim()
+    );
 
-const cart = [];
-const cartButton = document.getElementById('cart-button');
-const cartModal = document.getElementById('cart-modal');
-const closeCartButton = document.getElementById('close-cart');
-const cartItemsList = document.getElementById('cart-items');
-const cartCount = document.getElementById('cart-count');
+    // Adicionar item ao carrinho
+    cart.push({ name: itemName, price: itemPrice });
+    total += itemPrice;
 
-// Função para atualizar a exibição do carrinho
-function updateCartDisplay() {
-  // Atualiza o contador de itens no carrinho
-  cartCount.innerText = cart.length;
+    // Atualizar a contagem do carrinho
+    cartCount.textContent = cart.length;
 
-  // Limpa a lista de itens
-  cartItemsList.innerHTML = '';
-
-  // Adiciona os itens no carrinho à lista
-  cart.forEach(item => {
-    const listItem = document.createElement('li');
-    listItem.innerText = item;
-    cartItemsList.appendChild(listItem);
+    // Atualizar o modal do carrinho
+    updateCartModal();
   });
+});
+
+// Função para atualizar o modal do carrinho
+function updateCartModal() {
+  // Limpar a lista de itens
+  cartItemsList.innerHTML = "";
+
+  // Adicionar itens ao modal
+  cart.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
+    cartItemsList.appendChild(li);
+  });
+
+  // Atualizar o total
+  cartTotal.textContent = total.toFixed(2);
 }
 
-// Abre o modal do carrinho
-cartButton.addEventListener('click', () => {
-  cartModal.style.display = 'flex';
-  updateCartDisplay(); // Atualiza a lista de itens no carrinho
+// Função para abrir o modal do carrinho
+cartButton.addEventListener("click", () => {
+  cartModal.classList.add("show");
 });
 
-// Fecha o modal do carrinho
-closeCartButton.addEventListener('click', () => {
-  cartModal.style.display = 'none';
+// Função para fechar o modal do carrinho
+closeCart.addEventListener("click", () => {
+  cartModal.classList.remove("show");
 });
 
-// Adiciona um item ao carrinho quando o botão "Adicionar" é clicado
-document.querySelectorAll('.add-to-cart').forEach(button => {
-  button.addEventListener('click', (event) => {
-    const item = event.target.parentElement.querySelector('h3').innerText;
-    cart.push(item);
-    alert(`${item} adicionado ao pedido!`);
-    updateCartDisplay(); // Atualiza o carrinho
-  });
+// Fechar o modal ao clicar fora dele
+window.addEventListener("click", (event) => {
+  if (event.target === cartModal) {
+    cartModal.classList.remove("show");
+  }
 });
-
-
-
-
-
-
