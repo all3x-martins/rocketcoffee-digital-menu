@@ -162,9 +162,18 @@ ul li button:hover {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
   header {
     justify-content: space-between;
+  }
+
+  .logo img {
+    width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
     padding: 10px;
   }
 
