@@ -6,7 +6,7 @@
     <meta name="description" content="RocketCoffee - Seu café favorito, do jeito que você gosta.">
     <title>RocketCoffee</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="imagens/rocketCoffee-favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:wght@700&display=swap" rel="stylesheet">
@@ -18,12 +18,12 @@
     </div>
     <div class="menu">
       <button id="search-toggle" class="search-toggle" aria-label="Abrir campo de busca">
-        <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F3F3"><path d="M782.87-98.52 526.91-354.48q-29.43 21.74-68.15 34.61Q420.04-307 375.48-307q-114.09 0-193.55-79.46-79.45-79.45-79.45-193.54 0-114.09 79.45-193.54Q261.39-853 375.48-853q114.09 0 193.54 79.46 79.46 79.45 79.46 193.54 0 45.13-12.87 83.28T601-429.7l256.52 257.09-74.65 74.09ZM375.48-413q69.91 0 118.45-48.54 48.55-48.55 48.55-118.46t-48.55-118.46Q445.39-747 375.48-747t-118.46 48.54Q208.48-649.91 208.48-580t48.54 118.46Q305.57-413 375.48-413Z"/></svg></i> Buscar
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F3F3"><path d="M782.87-98.52 526.91-354.48q-29.43 21.74-68.15 34.61Q420.04-307 375.48-307q-114.09 0-193.55-79.46-79.45-79.45-79.45-193.54 0-114.09 79.45-193.54Q261.39-853 375.48-853q114.09 0 193.54 79.46 79.46 79.45 79.46 193.54 0 45.13-12.87 83.28T601-429.7l256.52 257.09-74.65 74.09ZM375.48-413q69.91 0 118.45-48.54 48.55-48.55 48.55-118.46t-48.55-118.46Q445.39-747 375.48-747t-118.46 48.54Q208.48-649.91 208.48-580t48.54 118.46Q305.57-413 375.48-413Z"/></svg> Buscar
       </button>
       <input type="text" id="search-bar" class="search-bar" placeholder="Buscar no menu..." aria-label="Campo de busca">
       <div class="cart-container">
         <button id="cart-button" class="cart-button" aria-label="Abrir carrinho">
-          <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-71.52q-33 0-56.5-23.5t-23.5-56.5q0-33 23.5-56.5t56.5-23.5q33 0 56.5 23.5t23.5 56.5q0 33-23.5 56.5T280-71.52Zm400 0q-33 0-56.5-23.5t-23.5-56.5q0-33 23.5-56.5t56.5-23.5q33 0 56.5 23.5t23.5 56.5q0 33-23.5 56.5T680-71.52Zm-419.87-640 83 174h277.74l95.3-174H260.13Zm-47.04-96.96h568.52q32.96 0 50.15 28.98 17.2 28.98 1.11 59.02l-129 233.96q-12.13 21.69-32.58 34.11Q650.84-440 626.52-440H333.61l-38.91 71.52h473.78v96.96H280q-51.22 0-76.48-44.02-25.26-44.03-1.43-86.98l52.3-93.48-139.48-295.52H31.52v-96.96h143.57l38 80Zm130.04 270.96h277.74-277.74Z"/></svg></i>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-71.52q-33 0-56.5-23.5t-23.5-56.5q0-33 23.5-56.5t56.5-23.5q33 0 56.5 23.5t23.5 56.5q0 33-23.5 56.5T280-71.52Zm400 0q-33 0-56.5-23.5t-23.5-56.5q0-33 23.5-56.5t56.5-23.5q33 0 56.5 23.5t23.5 56.5q0 33-23.5 56.5T680-71.52Zm-419.87-640 83 174h277.74l95.3-174H260.13Zm-47.04-96.96h568.52q32.96 0 50.15 28.98 17.2 28.98 1.11 59.02l-129 233.96q-12.13 21.69-32.58 34.11Q650.84-440 626.52-440H333.61l-38.91 71.52h473.78v96.96H280q-51.22 0-76.48-44.02-25.26-44.03-1.43-86.98l52.3-93.48-139.48-295.52H31.52v-96.96h143.57l38 80Zm130.04 270.96h277.74-277.74Z"/></svg>
           <span id="cart-count" class="cart-count">0</span>
         </button>
       </div>
@@ -37,11 +37,14 @@
       <div class="cart-total">
         <strong>Total: R$ <span id="cart-total">0.00</span></strong>
       </div>
-      <button id="close-cart" aria-label="Fechar carrinho">Fechar</button>
+      <div class="btn-container">
+        <button id="close-cart" aria-label="Fechar carrinho">Fechar</button>
+        <button id="checkout-button">Finalizar Compra</button>
+      </div>
     </div>
   </div>
 
-  <div class="conteiner">
+  <div class="container">
     <section>
       <h2>BEBIDAS</h2>
       <ul>
