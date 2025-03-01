@@ -24,10 +24,17 @@ searchToggle.addEventListener("click", () => {
   }
 });
 
+// Fecha a barra de pesquisa quando clicar fora dela
+document.addEventListener('click', (event) => {
+  if (!searchBar.contains(event.target) && !searchToggle.contains(event.target)) {
+    searchBar.classList.remove('open');
+  }
+})
+
 // Função para filtrar os itens do menu
 searchBar.addEventListener("input", () => {
   const searchTerm = searchBar.value.toLowerCase();
-  const sections = document.querySelectorAll(".conteiner section");
+  const sections = document.querySelectorAll(".container section");
 
   sections.forEach((section) => {
     const items = section.querySelectorAll("li");
