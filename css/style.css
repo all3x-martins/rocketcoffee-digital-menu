@@ -208,6 +208,7 @@ font-weight: bold;
 
 svg {
   width: 20px;
+  pointer-events: none;
 }
 
 /* Contêineres de botão */
